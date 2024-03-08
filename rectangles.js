@@ -16,6 +16,15 @@ class Rect {
         );
     }
 
+    pointWithin(pos){
+        return (
+            pos[0] >= this.x &&
+            pos[0] <= this.x + this.width &&
+            pos[1] >= this.y &&
+            pos[1] <= this.y + this.height
+        );
+    }
+
     get area() {
         return (this.width) * (this.height);
     }

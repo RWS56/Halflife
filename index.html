@@ -7,11 +7,38 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <canvas id="my-canvas" width="500px" height="500px">
-        hej
-    </canvas>
+  <div id="hotbar">
+    <button id="radioactive">Radioaktiva ämnen</button>
+    <button id="walls">Vägg-typer</button>
+    <button id="people">Människor/djur</button>
+  </div>
+
+  <div id="radioactive-items" class="hotbar-items hidden-items" style="display: none;">  
+    <button>Plutonium</button>
+    <button>Uranium</button>
+    <button>Cesium</button>
+  </div>
+      
+  <div id="walls-items" class="hotbar-items hidden-items" style="display: none;">  
+    <button>Betongvägg</button>
+    <button>Gipsvägg</button>
+    <button>Trävägg</button>
+  </div>
+      
+  <div id="people-items" class="hotbar-items hidden-items" style="display: none;">  
+    <button>Människa</button>
+    <button>Hund</button>
+    <button>Katt</button>
+  </div>
+
+  <span id="cursorText"> LMFAo</span>
+      
+  <canvas id="my-canvas" width="500px" height="500px">
+    hej
+  </canvas>
+  <script src="./js/hotbar.js"></script>
+  <script src="./rectangles.js"></script>
+  <script src="./wall.js"></script>
+  <script src="./script.js"></script>
 </body>
-<script src="./rectangles.js"></script>
-<script src="./wall.js"></script>
-<script src="./script.js"></script>
 </html>

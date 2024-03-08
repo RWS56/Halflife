@@ -1,37 +1,65 @@
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
+html{
+    overflow: hidden;
 }
 
-.icon {
-    cursor: pointer;
-    margin-right: 10px;
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+#hotbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-evenly;
+}
+  
+#hotbar button {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
 }
 
-.dropdown a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
+#cursorText{
+  position: absolute;
+  z-index: 1000;
+  left: 12px;
+  top: 90px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.hotbar-items {
+  display: flex;
+  position: absolute; 
+  flex-wrap: wrap;
+  margin: 5px 0;
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  padding: 5px;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    min-width: 120px;
-    z-index: 1;
+ .hidden-items {
+  display: none;
 }
+
+.hotbar-items button {
+  padding: 5px 10px; 
+  margin-right: 5px; 
+  border: none; 
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.hotbar-items button:hover {
+  background-color: #eee; 
+}
+  
+  

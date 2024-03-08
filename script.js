@@ -1,4 +1,5 @@
 let canvas = document.getElementById("my-canvas");
+let cursorText = document.getElementById("cursorText");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -33,7 +34,8 @@ let walls = {
 };
 
 let wallColors = {
-    "lead": "gray",
+    "lead": "rgb(33, 33, 33)",
+    
 };
 
 function update() {
@@ -49,6 +51,12 @@ function update() {
     }
 
     ctx.closePath();
+
+    for(let i in walls){
+        if(walls[i].rect().pointWithin(mousepos)){
+            cursorText.innerHTML = `Type:${walls[i].type}\nPos:${walls[i].origin}`;
+        }
+    }
 
     requestAnimationFrame(update);
 }
