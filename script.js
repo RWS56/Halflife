@@ -52,6 +52,7 @@ function update() {
 
     ctx.closePath();
 
+    cursorText.innerHTML = `None`;
     for(let i in walls){
         if(walls[i].rect().pointWithin(mousepos)){
             cursorText.innerHTML = `Type:${walls[i].type}\nPos:${walls[i].origin}`;

@@ -9,6 +9,4 @@ class Wall {
     rect() {
         return new Rect(this.origin[0], this.origin[1], this.width, this.height);
     }
-
-
 }
